@@ -126,6 +126,30 @@ game.splash("PRESS ANY BUTTON TO JOIN")
 scroller.scrollBackgroundWithSpeed(-50, 0)
 started = 1
 forever(function () {
+    if (min < 0.5) {
+        min = 0.5
+    }
+    if (max < 6) {
+        max = 6
+    }
+})
+forever(function () {
+    pauseUntil(() => started == 1)
+    pause(1000)
+    if (info.player1.hasLife()) {
+        info.player1.changeScoreBy(1)
+    }
+    if (info.player2.hasLife()) {
+        info.player2.changeScoreBy(1)
+    }
+    if (info.player3.hasLife()) {
+        info.player3.changeScoreBy(1)
+    }
+    if (info.player4.hasLife()) {
+        info.player4.changeScoreBy(1)
+    }
+})
+forever(function () {
     pauseUntil(() => started == 1)
     pause(randint(100 * min, 100 * max))
     Asteroid = sprites.createProjectileFromSide(assets.image`asteroid`, randint(-50, -150), 0)
@@ -135,9 +159,9 @@ forever(function () {
 })
 forever(function () {
     pauseUntil(() => started == 1)
-    pause(randint(250, 2500))
-    min += 1
-    max += 1
+    pause(randint(5000, 7500))
+    min += -0.5
+    max += -0.5
 })
 forever(function () {
     pauseUntil(() => started == 1)
