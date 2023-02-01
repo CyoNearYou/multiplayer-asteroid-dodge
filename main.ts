@@ -82,6 +82,9 @@ sprites.onOverlap(SpriteKind.Player2, SpriteKind.Projectile, function (sprite, o
     for (let index = 0; index < 4; index++) {
         Player2.y = randint(0, 120)
     }
+    if (Player2.overlapsWith(Asteroid)) {
+        Player2.y = randint(0, 120)
+    }
     info.player2.changeLifeBy(-1)
 })
 controller.player2.onEvent(ControllerEvent.Connected, function () {
