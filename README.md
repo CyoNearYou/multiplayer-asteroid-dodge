@@ -32,6 +32,6 @@ This image may take a few minutes to refresh.
 * for PXT/arcade
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
  
- 
+ ## Online Game Hosting
  
 Go to https://arcade.makecode.com/--multiplayer?host=S67064-16131-73649-08917 to host an online game
